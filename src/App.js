@@ -39,8 +39,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>ImText</h1>
-      <p>Gets words in images!</p>
+      <h1 style={{ color: "white" }}>Image to TExt </h1>
+      <br />
+      <br />
       <div className="input-wrapper">
         <label htmlFor="upload">Upload Images</label>
         <input
@@ -66,6 +67,16 @@ function App() {
             )}
           </div>
         ))}
+      </div>
+      <br />
+      <br />
+      <div>
+        <textarea
+          style={{ height: 500, width: "100%" }}
+          value={JSON.stringify(textResults)}
+          // onChange={handleChange}
+          placeholder="Type something here..."
+        />
       </div>
     </div>
   );
